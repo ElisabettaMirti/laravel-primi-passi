@@ -14,5 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    $header = [
+        'Home',
+        'About',
+        'Contacts'
+    ];
+    return view('home', compact ("header"));
 });
